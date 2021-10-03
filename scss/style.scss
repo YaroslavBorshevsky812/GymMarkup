@@ -1,0 +1,497 @@
+@import 'normalize.css';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+// ===== MIXIN =====
+
+@mixin montserrat {
+  font-family: 'Montserrat', sans-serif;;
+}
+
+@mixin poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+// ===== / MIXIN =====
+
+// ==== Variables ====
+
+$color-fon: #000;
+$color-text: rgba(255, 255, 255, 0.75);
+$color-hover-text: rgba(255, 255, 255, 1);
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-semi-bold: 600;
+
+// ==== // Variables ====
+
+
+.wrapper_inner {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: $color-fon;
+    @include montserrat;
+}
+
+.red {
+  color: #e74c3c;
+}
+
+.btn {
+  background-color: #a92a1d;
+  border: 0;
+  padding: 8px 24px;
+  color: $color-text;
+  font-size: 16px;
+  line-height: 32px;
+  cursor: pointer;
+  &:hover {
+    color: $color-hover-text;
+  }
+  &:active {
+    background-color: #e74c3c;
+  }
+}
+
+// === HEADER === //
+
+.header {
+    width: 100%;
+    max-width: 1600px;
+    color: $color-text;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 36px 75px;
+        &_left {
+          display: flex;
+          align-items: center;
+        }
+        &_right {
+          display: flex;
+          align-items: center;
+        }
+    }
+    &_navigation {
+      display: flex;
+      list-style: none;
+      margin-right: 40px;
+      &_item {
+        & + & {
+          margin-left: 36px;
+        }
+        &_link {
+          color: $color-text;
+          font-size: 16px;
+          font-weight: $fw-regular;
+          text-decoration: none;
+          &:hover {
+            color: $color-hover-text;
+          }
+        }
+      }
+    }
+}
+
+.logo {
+  margin-right: 37px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  &_logo {
+    margin-right: 13px;
+  }
+  &_text {
+    font-size: 16px;
+    font-weight: $fw-regular;
+  }
+}
+
+// === // HEADER === //
+
+// === INTRO === //
+
+.intro {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  height: 100vh;
+  background-image: url('/images/intro/Rectangle\ 487.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+    &_inner {
+      max-width: 1450px;
+      padding: 0px 75px;
+      color: $color-text;
+      &_content {
+        margin-left: 135px;
+        &_title {
+          font-size: 60px;
+          font-weight: $fw-bold;
+          max-width: 460px;
+          text-align: start;
+          
+          margin-bottom: 34px;
+        }
+      }
+    }
+  &_btns {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.play {
+  margin-left: 25px;
+  transition: all .2s;
+  cursor: pointer;
+  background: none;
+  border: none;
+  &:hover{
+    path {
+      fill: #e74c3c;
+    }
+  }
+  &:active {
+    path {
+      fill: $color-text;
+    }
+  }
+}
+// === // INTRO === //
+
+// === EXERCISE === //
+
+.exercises_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 160px;
+  margin-bottom: 100px;
+  &_content {
+    max-width: 790px;
+    color: $color-text;
+    margin: 0 auto;
+    text-align: center;
+    &_title {
+      font-size: 48px;
+      margin-bottom: 29px;
+      font-weight: $fw-semi-bold;
+    }
+    &_text {
+      font-size: 18px;
+      margin-bottom: 56px;
+      font-weight: $fw-regular;
+    }
+  }
+}
+
+.exercises_content {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+}
+
+.exercises_wrapper_item {
+  max-width: 320px;
+  width: 20%;
+    &_pic {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+}
+
+// === // EXERCISE === //
+
+// === ONLINE === //
+
+.online {
+  margin-bottom: 290px;
+  &_header {
+    margin-top: 115px;
+    margin-bottom: 170px;
+    &_inner {
+      max-width: 1450px;
+      padding: 0px 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &_title {
+        color: $color-text;
+        font-size: 36px;
+        max-width: 365px;
+        text-align: start;
+        font-weight: $fw-semi-bold;
+      }
+      &_text {
+        color: $color-text;
+        font-size: 18px;
+        font-weight: $fw-regular;
+        max-width: 690px;
+        text-align: start;
+      }
+    }
+  }
+  &_content {
+    display: flex;
+    align-items: center;
+    color: $color-text;
+    &_picture {
+      max-width: 805px;
+      &_pic {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &_info {
+      margin-left: 82px;
+      margin-right: 72px;
+      max-width: 480px;
+      &_title {
+        font-size: 36px;
+        font-weight: $fw-semi-bold;
+        margin-bottom: 24px;
+      }
+      &_subtitle {
+        font-size: 24px;
+        font-weight: $fw-semi-bold;
+        margin-bottom: 12px;
+      }
+      &_text {
+        font-size: 18px;
+        font-weight: $fw-regular;
+      }
+    }
+  }
+}
+
+// === // ONLINE === //
+
+// === WELCOME === //
+
+.welcome {
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome_item {
+  margin-bottom: 65px;
+  
+  &_pic {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.welcome_column {
+  max-width: 500px;
+  & + & {
+    margin-left: 48px;
+  }
+}
+
+.welcome_column-second {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -160px;
+}
+.welcome_column-third {
+  margin-top: -400px;
+}
+
+.welcome_column_content {
+  color: $color-text;
+  text-align: center;
+  max-width: 355px;
+  margin: 0 auto;
+  &_title {
+    font-size: 24px;
+    font-weight: $fw-bold;
+    margin-bottom: 24px;
+  }
+  &_text {
+    font-size: 18px;
+    font-weight: $fw-regular;
+  }
+}
+
+// === // ONLINE === //
+
+
+// ===  SUBSCRIBE === //
+
+.subscribe {
+  width: 100%;
+  max-width: 1600px;
+  height: 1042px;
+  background-image: url('/images/subscribe/Rectangle\ 486.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  &_content {
+    display: flex;
+    flex-direction: column;
+    color: $color-text;
+    text-align: center;
+    margin: 0 auto;
+    &_title {
+      font-size: 36px;
+      font-weight: $fw-semi-bold;
+      margin-bottom: 24px;
+    }
+    &_subtitle {
+      font-size: 18px;
+      font-weight: $fw-regular;
+      margin-bottom: 36px;
+    }
+    &_input {
+      padding: 17px 150px;
+      text-align: center;
+      background: none;
+      border: 1px solid $color-text;
+      margin-bottom: 16px;
+      color: $color-text;
+      font-size: 18px;
+      font-weight: $fw-regular;
+      &::placeholder {
+        color: $color-text;
+      }
+    }
+    &_btn {
+      cursor: pointer;
+      text-align: center;
+      padding: 17px;
+      background-color: $color-text;
+      font-size: 18px;
+      font-weight: $fw-medium;
+    }
+  }
+    
+}
+
+// === // SUBSCRIBE === //
+
+// === FOOTER === //
+
+.footer {
+  @include poppins;
+  color: $color-text;
+  &_logo {
+    max-width: 330px;
+    &_text {
+      font-size: 18px;
+      font-weight: $fw-regular;
+    }
+  }
+  &_navigation {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    &_title {
+      margin-bottom: 45px;
+      font-size: 24px;
+      font-weight: $fw-medium;
+    }
+    &_link {
+      text-decoration: none;
+      color: $color-text;
+      font-size: 18px;
+      font-weight: $fw-medium;
+      &:hover {
+        color: $color-hover-text;
+      }
+    }
+    li {
+      margin-bottom: 30px;
+    }
+  }
+
+  .footer_inner {
+    max-width: 1450px;
+    padding: 63px 75px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer_follow {
+  &_title {
+    margin-bottom: 24px;
+  }
+  ul {
+    display: flex;
+  }
+  &_link {
+    margin-right: 10px;
+    padding: 12px 15px;
+    background-color: #292929;
+    transition: all .3s;
+    &:hover{
+      background-color: #e74c3c;
+      path {
+        transition: all .3s;
+        fill: $color-text;
+      }
+    }
+  }
+}
+
+// === // FOOTER === //
+
+
+// === COPYRIGHT === //
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  color: $color-text;
+  margin-bottom: 165px;
+}
+
+// === // COPYRIGHT === //

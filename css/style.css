@@ -1,0 +1,344 @@
+@import url(normalize.css);
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+.wrapper_inner {
+  max-width: 1450px;
+  margin: 0 auto; }
+
+body {
+  background-color: #000;
+  font-family: 'Montserrat', sans-serif; }
+
+.red {
+  color: #e74c3c; }
+
+.btn {
+  background-color: #a92a1d;
+  border: 0;
+  padding: 8px 24px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 32px;
+  cursor: pointer; }
+  .btn:hover {
+    color: white; }
+  .btn:active {
+    background-color: #e74c3c; }
+
+.header {
+  width: 100%;
+  max-width: 1600px;
+  color: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+  .header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 75px; }
+    .header_inner_left {
+      display: flex;
+      align-items: center; }
+    .header_inner_right {
+      display: flex;
+      align-items: center; }
+  .header_navigation {
+    display: flex;
+    list-style: none;
+    margin-right: 40px; }
+    .header_navigation_item + .header_navigation_item {
+      margin-left: 36px; }
+    .header_navigation_item_link {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none; }
+      .header_navigation_item_link:hover {
+        color: white; }
+
+.logo {
+  margin-right: 37px; }
+
+.time {
+  display: flex;
+  align-items: center; }
+  .time_logo {
+    margin-right: 13px; }
+  .time_text {
+    font-size: 16px;
+    font-weight: 400; }
+
+.intro {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  height: 100vh;
+  background-image: url("/images/intro/Rectangle 487.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center; }
+  .intro_inner {
+    max-width: 1450px;
+    padding: 0px 75px;
+    color: rgba(255, 255, 255, 0.75); }
+    .intro_inner_content {
+      margin-left: 135px; }
+      .intro_inner_content_title {
+        font-size: 60px;
+        font-weight: 700;
+        max-width: 460px;
+        text-align: start;
+        margin-bottom: 34px; }
+  .intro_btns {
+    display: flex;
+    align-items: center; }
+
+.play {
+  margin-left: 25px;
+  transition: all .2s;
+  cursor: pointer;
+  background: none;
+  border: none; }
+  .play:hover path {
+    fill: #e74c3c; }
+  .play:active path {
+    fill: rgba(255, 255, 255, 0.75); }
+
+.exercises_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 160px;
+  margin-bottom: 100px; }
+  .exercises_header_content {
+    max-width: 790px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 auto;
+    text-align: center; }
+    .exercises_header_content_title {
+      font-size: 48px;
+      margin-bottom: 29px;
+      font-weight: 600; }
+    .exercises_header_content_text {
+      font-size: 18px;
+      margin-bottom: 56px;
+      font-weight: 400; }
+
+.exercises_content {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: row; }
+
+.exercises_wrapper_item {
+  max-width: 320px;
+  width: 20%; }
+  .exercises_wrapper_item_pic {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+.online {
+  margin-bottom: 290px; }
+  .online_header {
+    margin-top: 115px;
+    margin-bottom: 170px; }
+    .online_header_inner {
+      max-width: 1450px;
+      padding: 0px 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .online_header_inner_title {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 36px;
+        max-width: 365px;
+        text-align: start;
+        font-weight: 600; }
+      .online_header_inner_text {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 18px;
+        font-weight: 400;
+        max-width: 690px;
+        text-align: start; }
+  .online_content {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.75); }
+    .online_content_picture {
+      max-width: 805px; }
+      .online_content_picture_pic {
+        display: block;
+        width: 100%;
+        height: auto; }
+    .online_content_info {
+      margin-left: 82px;
+      margin-right: 72px;
+      max-width: 480px; }
+      .online_content_info_title {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 24px; }
+      .online_content_info_subtitle {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 12px; }
+      .online_content_info_text {
+        font-size: 18px;
+        font-weight: 400; }
+
+.welcome {
+  display: flex;
+  flex-direction: row; }
+
+.welcome_item {
+  margin-bottom: 65px; }
+  .welcome_item_pic {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+.welcome_column {
+  max-width: 500px; }
+  .welcome_column + .welcome_column {
+    margin-left: 48px; }
+
+.welcome_column-second {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -160px; }
+
+.welcome_column-third {
+  margin-top: -400px; }
+
+.welcome_column_content {
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  max-width: 355px;
+  margin: 0 auto; }
+  .welcome_column_content_title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px; }
+  .welcome_column_content_text {
+    font-size: 18px;
+    font-weight: 400; }
+
+.subscribe {
+  width: 100%;
+  max-width: 1600px;
+  height: 1042px;
+  background-image: url("/images/subscribe/Rectangle 486.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center; }
+  .subscribe_content {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    margin: 0 auto; }
+    .subscribe_content_title {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 24px; }
+    .subscribe_content_subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 36px; }
+    .subscribe_content_input {
+      padding: 17px 150px;
+      text-align: center;
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      margin-bottom: 16px;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 18px;
+      font-weight: 400; }
+      .subscribe_content_input::placeholder {
+        color: rgba(255, 255, 255, 0.75); }
+    .subscribe_content_btn {
+      cursor: pointer;
+      text-align: center;
+      padding: 17px;
+      background-color: rgba(255, 255, 255, 0.75);
+      font-size: 18px;
+      font-weight: 500; }
+
+.footer {
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.75); }
+  .footer_logo {
+    max-width: 330px; }
+    .footer_logo_text {
+      font-size: 18px;
+      font-weight: 400; }
+  .footer_navigation {
+    display: flex;
+    flex-direction: column;
+    text-align: start; }
+    .footer_navigation_title {
+      margin-bottom: 45px;
+      font-size: 24px;
+      font-weight: 500; }
+    .footer_navigation_link {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 18px;
+      font-weight: 500; }
+      .footer_navigation_link:hover {
+        color: white; }
+    .footer_navigation li {
+      margin-bottom: 30px; }
+  .footer .footer_inner {
+    max-width: 1450px;
+    padding: 63px 75px;
+    display: flex;
+    justify-content: space-between; }
+
+.footer_follow_title {
+  margin-bottom: 24px; }
+
+.footer_follow ul {
+  display: flex; }
+
+.footer_follow_link {
+  margin-right: 10px;
+  padding: 12px 15px;
+  background-color: #292929;
+  transition: all .3s; }
+  .footer_follow_link:hover {
+    background-color: #e74c3c; }
+    .footer_follow_link:hover path {
+      transition: all .3s;
+      fill: rgba(255, 255, 255, 0.75); }
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 165px; }
